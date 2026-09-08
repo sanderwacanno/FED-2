@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Rood
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Responsive
  
 </details>
 
@@ -36,7 +36,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  [link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp](https://www.nedgame.nl/)
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
@@ -57,6 +57,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+
+  Banners op de hoofdpagina zijn niet selecteerbaar met H of K, ondanks dat het links zijn waar je op kan klikken.
+
+  Op de hoofdpagina zijn de titels van de producten weergegeven met H3's, ondanks dat in dezelfde container ook een bij textje H3 gebruikt.
+  <img src="readme-images/headingissue.png" width="375px" alt="Rare heading dingetje">
+
+  Geen alt text ingevuld voor de main plaatje van de product pagina
+  <img src="readme-images/noalt.png" width="375px" alt="CSS van het plaatje waar de alt text niet is ingevuld">
+
+  De header is niet echt een header, maar eigenlijk een div'je.
 
 </details>
 

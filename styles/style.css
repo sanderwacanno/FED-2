@@ -17,6 +17,8 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+
+	--background-image: url(../images/581_s4756884n2ht6247.webp);
 }
 
 
@@ -29,3 +31,75 @@
 
 /* jouw code */
 
+@media only screen and (min-width: 1025px){
+	body {
+	background-image: var(--background-image);
+	background-size: cover;
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+	}
+}
+
+header ul {
+	overflow: unset;
+	white-space: nowrap;
+	letter-spacing: .45px;
+	text-align: left;
+	list-style-type: none;
+	line-height: 30px;
+	display: inline-flex;
+	width: 100%;
+	align-content: center;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+#topbanner{
+	max-width: 1500px;
+	margin: auto;
+	text-align: center;
+	min-height: 20px;
+}
+
+#topbanner img {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+}
+
+#container {
+	background-color: white;
+	position: relative; 
+	margin: auto auto 20px;
+	max-width: 1500px;
+}
+
+/****************/
+/* product */
+/****************/
+.productFloater{
+	width: 142px;
+	display: inline-block;
+	text-align: center;
+	padding: 1em .5em;
+	border: 1px solid #efefef;
+	border-radius: 5px;
+}
+
+.productFloater img {
+	max-width: 130px;
+	max-height: 160px;
+}
+
+.productFloater button {
+	display: inline-block;
+	width: 2.5em;
+	height: 2.5em;
+	margin: .5em 0 0;
+	padding: 0;
+	border: none;
+	border-radius: 100%;
+	text-align: center;
+	cursor: pointer;
+	outline: 0;
+}
