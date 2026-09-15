@@ -17,6 +17,7 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+	--ned-game-blue: #069;
 
 	--background-image: url(../images/581_s4756884n2ht6247.webp);
 }
@@ -31,6 +32,11 @@
 
 /* jouw code */
 
+body {
+	background-image: none;
+	font-family: Roboto, sans-serif, Arial, Helvetica;
+}
+
 @media only screen and (min-width: 1025px){
 	body {
 	background-image: var(--background-image);
@@ -39,6 +45,17 @@
   	background-attachment: fixed;
 	}
 }
+
+@media only screen and (max-width: 1024px){
+	.desktopOnly{
+		display: none;
+	}
+
+	body {
+		font-size: 12px
+	}
+}
+
 
 header ul {
 	overflow: unset;
@@ -52,6 +69,77 @@ header ul {
 	align-content: center;
 	flex-wrap: nowrap;
 	justify-content: space-between;
+}
+
+header input {
+	width: calc(100% - 43px);
+	height: 43px;
+	color: #666;
+
+	border: 1px solid #666;
+	border-left: 1px solid #666;
+	border-right: 0;
+	border-radius: 5px 0 0 5px;
+}
+
+header p {
+	text-align: center;
+}
+
+header form button {
+	display: inline-block;
+	width: 43px;
+	height: 43px;
+	margin: 0;
+	padding: 0 6px;
+	background-color: #00669b;
+	border: 1px solid #00669b;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+}
+
+header form {
+	padding: 10px 0 0;
+	display: inline-flex;
+	width: 100%;
+}
+
+header nav svg {
+	height: 2em;
+	width: auto;
+}
+
+header nav button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+svg {
+	height: 1em;
+	width: auto;
+}
+
+img{
+	max-width: 100%;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 1.45em;
+	margin-top: 2rem;
+}
+
+@media only screen and (max-width: 1024px){
+	h1 {
+		text-align: center;
+	}
+}
+
+h2 {
+	font-size: 1.25em;
 }
 
 #topbanner{
@@ -72,6 +160,19 @@ header ul {
 	position: relative; 
 	margin: auto auto 20px;
 	max-width: 1500px;
+}
+
+#NedgameLogo {
+	width: 125px;
+	max-width: 100%;
+	display: block;
+	object-fit: contain;
+}
+
+#mobileNav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 /****************/
@@ -102,4 +203,69 @@ header ul {
 	text-align: center;
 	cursor: pointer;
 	outline: 0;
+}
+
+.productFloater a{
+	display: block;
+}
+
+.productFloater span{
+	display: block;
+}
+
+.productswrapper {
+	grid-template-columns: repeat(7, 1fr);
+	width: 100%;
+}
+
+@media only screen and (max-width: 1024px){
+	.productswrapper {
+		overflow-x: scroll;
+		overflow-y: hidden;
+		white-space: nowrap;
+		height: auto;
+		width: 100%;
+	}
+}
+
+/****************/
+/* Mobile tabs */
+/****************/
+#mobileTabs {
+	display: block;
+	overflow: auto;
+	white-space: nowrap;
+	scrollbar-width: none;
+}
+
+
+#mobileTabs a {
+	color: var(--ned-game-blue);
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	white-space: nowrap;
+	border: 1px solid;
+	border-radius: 24px;
+	padding: 4px 24px;
+	height: 37px;
+	margin-right: 9px;
+	max-width: 180px;
+	min-width: 80px;
+}
+
+#mobileTabs a:first-child{
+	margin-left: 5px;
+}
+
+#mobileTabs a:hover{
+	text-decoration: underline;
+}
+
+#productimage {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
 }
