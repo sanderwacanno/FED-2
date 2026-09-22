@@ -243,4 +243,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2. bron 2
   3. ...
 
+  https://stackoverflow.com/questions/1713048/how-to-style-dt-and-dd-so-they-are-on-the-same-line
+
 </details>
