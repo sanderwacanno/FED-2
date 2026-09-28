@@ -52,7 +52,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Toegankelijkheidstest 1/2 (week 1)
 
-<details>
+<details open>
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
@@ -81,7 +81,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Breakdownschets (week 1)
 
-<details>
+<details open>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
@@ -167,11 +167,37 @@ Dingen om aan te werken:
 
 ## Toegankelijkheidstest 2/2 (week 4)
 
-<details>
+<details open>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+
+  <img src="readme-images/w3ccheck2-page1.png" width="375px" alt="Pagina 1 W3C test">
+  De W3C validator in VS code geeft geen errors in de HTML. 
+  <img src="readme-images/w3ccheck2-page2.png" width="375px" alt="Pagina 2 W3C test">
+  Bij de originele site waren de focus style onzichtbaar als je met de focus style door de site probeert te gaan, bij mijn versie is dat niet zo en is het zichtbaar.
+  Focus style is nog niet zichtbaar voor buttons.
+  <img src="readme-images/w3ccheck2-page3.png" width="375px" alt="Pagina 3 W3C test">
+  Gebruik een H2 voor de omschrijving op de product pagina, wat mij handig leek.
+  Gebruik alleen maar 1 h1 element, de hoofdpagina’s h1 is onzichtbaar, terwijl de tweede pagina de h1 onzichtbaar maakt op desktop voormaat en de titel op desktop gebruikt een h2’tje
+
+
+  Gebruikt ul and dl’s om tekst op een logische wijze neer te zetten.
+
+
+  Gebruikt geen decorative images die een null alt nodig zou moeten hebben, complex images of images met tekst.
+  <img src="readme-images/w3ccheck2-page4.png" width="375px" alt="Pagina 4 W3C test">
+  Site gebruikt geen video of audio.
+
+  Gebruikt een button in plaats van een a element voor de nachtmode, omdat mij dat logischer leekt voor een knop.
+
+  <img src="readme-images/w3ccheck2-page5.png" width="375px" alt="Pagina 5 W3C test">
+  Heeft een dark en lightmode
+
+  Enige animatie is de hartknopje die rood wordt, en de carousel die van plaatje opschuift.
+
+  Witte achtergrond met normale blauwe link tekst is misschien nog niet voldoende in contrast.
 
 </details>
 
@@ -228,9 +254,9 @@ Dingen om aan te werken:
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Padding, margin en object grootte vond ik lastig om het 1:1 te kopieren van de originele site. 
+  Ook veranderde de fontsize niet zoals dat doet in de originele site, waard
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
 
 
@@ -243,7 +269,12 @@ Dingen om aan te werken:
   <summary>continu bijhouden terwijl je werkt</summary>
 
   W3schools.com voor naslag werk over hoe sommige functies werken (Styling Lists, Text-transform, Text-shadow, Background-image property, Background-size, How To Create a Search Bar, CSS pointer-events, input, span, select, Grid Layout, grid-column en grid-column-start property, grid template, flex-wrap, onclick Event)
+
   https://stackoverflow.com/questions/1713048/how-to-style-dt-and-dd-so-they-are-on-the-same-line
+  
   Tutorial voor het maken van de product carousel: https://css-tricks.com/css-only-carousel/
-  Nedgame.nl voor CSS code voor padding, margin, etc van bepaalde elementen.
+  
+  Nedgame.nl voor CSS code voor padding, margin, etc van bepaalde elementen, en ook afbeeldingen.
+  
+  Fontawesome.com zijn de makers van de iconen die de site gebruiken.
 </details>

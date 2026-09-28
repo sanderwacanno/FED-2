@@ -521,7 +521,7 @@ header div.desktopOnly a:nth-of-type(2){
 	color: var(--ned-game-green);
 }
 
-header div.desktopOnly a:not(:nth-of-type(2)), header div.desktopOnly button{
+header div.desktopOnly a:not(:nth-of-type(2)), header div.desktopOnly nav button{
 	fill: var(--icon-black);
 	color: var(--icon-black);
 }
