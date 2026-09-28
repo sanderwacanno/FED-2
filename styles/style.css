@@ -16,12 +16,14 @@
 :root {
 	/* startje */
 	--color-text:#111;
-	--color-background:#eee;
+	--color-text-white: #ffffff;
+	--color-background:#ffffff;
 	--ned-game-red: #ff6969;
 	--ned-game-green: #00B67A;
 	--ned-game-blue: #069;
 	--icon-color: #959595;
 	--button-grey: #F7F7F5;
+	--button-altgreen: #12B610;
 
 	--background-image: url(../images/581_s4756884n2ht6247.webp);
 }
@@ -40,6 +42,7 @@ body {
 	background-image: none;
 	font-family: Roboto, sans-serif, Arial, Helvetica;
 	margin: 0px;
+	font-size: 14px
 }
 
 @media only screen and (min-width: 1025px){
@@ -61,7 +64,11 @@ body {
 	}
 }
 
-
+@media only screen and (min-width: 1025px){
+	main {
+		padding: 1em 0em 1em 0em;
+	}
+} 
 
 
 svg {
@@ -77,6 +84,10 @@ a {
 	color: var(--ned-game-blue);
 	text-decoration: none;
 }
+
+/* a:focus {
+
+} */
 
 h1 {
 	font-weight: 700;
@@ -105,7 +116,7 @@ h2 {
 /* Header */
 /****************/
 header{ 
-	padding: 8px;
+	padding: 8px 8px 0px 8px;
 }
 
 header ul {
@@ -115,16 +126,32 @@ header ul {
 	text-align: left;
 	list-style-type: none;
 	line-height: 30px;
-	display: inline-flex;
 	width: 100%;
 	align-content: center;
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	overflow-x: hidden;
+
+	@media only screen and (min-width: 1025px){
+		display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+	}
 }
 
-header input {
+header form.mobileOnly input {
 	width: calc(100% - 43px);
+	height: 43px;
+	color: #666;
+
+	border: 1px solid #666;
+	border-left: 1px solid #666;
+	border-right: 0;
+	border-radius: 5px 0 0 5px;
+}
+
+header div.desktopOnly input {
+	width: calc(80% - 43px);
 	height: 43px;
 	color: #666;
 
@@ -169,6 +196,15 @@ header nav button {
 	cursor: pointer;
 }
 
+@media only screen and (min-width: 1025px) {
+	header {
+		position: sticky;
+        top: -4em;
+        background: var(--color-background);
+        z-index: 3;
+	}
+}
+
 #topbanner img {
 	display: block;
 	margin: auto;
@@ -176,10 +212,11 @@ header nav button {
 }
 
 #container {
-	background-color: white;
+	background-color: var(--color-background);
 	position: relative; 
 	margin: auto auto 20px;
 	max-width: 1500px;
+	overflow-x: clip;
 }
 
 #NedgameLogo {
@@ -189,7 +226,7 @@ header nav button {
 	object-fit: contain;
 }
 
-#mobileNav {
+header nav.mobileOnly:first-of-type {
 	@media only screen and (max-width: 1024px){
 		display: flex;
 	}
@@ -198,17 +235,17 @@ header nav button {
 	align-items: center;
 }
 
-#mobileNav svg{
+header nav.mobileOnly:first-of-type svg{
 	fill: var(--icon-color);
 }
 
-#mobileNav div {
+header nav.mobileOnly:first-of-type div {
 	display: flex;
 	align-items: center;
 	gap: 0.5em;
 }
 
-#mobileNav .cartcounter {
+header nav.mobileOnly:first-of-type .cartcounter {
 	position: absolute;
 	background-color: var(--ned-game-red);
 	border-radius: 50%;
@@ -216,11 +253,11 @@ header nav button {
 	/* right: 12px; */
 	width: 1.3em;
 	height: 1.3em;
-	color: white;
+	color: var(--color-text-white);
 	text-align: center;
 }
 
-#mobileNav .favcounter {
+header nav.mobileOnly:first-of-type .favcounter {
 	position: absolute;
 	background-color: var(--ned-game-red);
 	border-radius: 50%;
@@ -228,23 +265,46 @@ header nav button {
 	/* right: px; */
 	width: 1.3em;
 	height: 1.3em;
-	color: white;
+	color: var(--color-text-white);
 	text-align: center;
 }
 
-#mobileNav .counterbutton {
+header nav.mobileOnly:first-of-type .counterbutton {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
+header div.desktopOnly .cartcounter {
+	position: absolute;
+	background-color: var(--ned-game-red);
+	border-radius: 50%;
+	top: 60px;
+	/* right: 12px; */
+	width: 1.3em;
+	height: 1.3em;
+	color: var(--color-text-white);
+	text-align: center;
+}
+
+header div.desktopOnly .favcounter {
+	position: absolute;
+	background-color: var(--ned-game-red);
+	border-radius: 50%;
+	top: 60px;
+	/* right: 12px; */
+	width: 1.3em;
+	height: 1.3em;
+	color: var(--color-text-white);
+	text-align: center;
+}
 
 
 
 /****************/
 /* Mobile tabs */
 /****************/
-#mobileTabs {
+header nav.mobileOnly:nth-of-type(2) {
 	@media only screen and (max-width: 1024px){
 		display: block;
 	} 
@@ -254,7 +314,7 @@ header nav button {
 }
 
 
-#mobileTabs a {
+header nav.mobileOnly:nth-of-type(2) a {
 	color: var(--ned-game-blue);
 
 	display: inline-flex;
@@ -270,11 +330,11 @@ header nav button {
 	min-width: 80px;
 }
 
-#mobileTabs a:first-child{
+header nav.mobileOnly:nth-of-type(2) a:first-child{
 	margin-left: 5px;
 }
 
-#mobileTabs a:hover{
+header nav.mobileOnly:nth-of-type(2) a:hover{
 	text-decoration: underline;
 }
 
@@ -285,7 +345,7 @@ footer ul{
 }
 footer li {
 	list-style: none;
-	margin: 2.4px 0;
+	margin: 2.4px 0 0 15px;
 	padding: 4px 0;
 }
 
@@ -298,6 +358,10 @@ footer div.desktopOnly div{
 	align-items: center;
 }
 
+footer div.desktopOnly div:first-of-type{
+	justify-content: space-around;
+}
+
 footer div.desktopOnly div:first-of-type div{
 	display: block;
 }
@@ -305,9 +369,16 @@ footer div.desktopOnly div:first-of-type div{
 /* Main Nav */
 main nav {
 	margin-top: 24px;
-	display: flex;
-	overflow-x: scroll;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	justify-content: space-around;
 	text-wrap: nowrap;
+	@media only screen and (min-width: 1025px){
+		overflow-x: hidden;
+	}
+	@media only screen and (max-width: 1024px){
+		overflow-x: scroll;
+	}
 }
 
 main nav:first-of-type a{
@@ -323,6 +394,10 @@ main nav a {
 	text-align: center;
 }
 
+main nav a:hover {
+	border: 1px solid #222121;
+}
+
 main nav a img{
 	min-width: 150px;
 	height: auto;
@@ -332,8 +407,12 @@ main nav a img{
     object-position: bottom;
 }
 
+main nav p {
+	color: var(--color-text);
+}
+
 /* Desktop Tabs */
-header nav.desktopOnly{
+header > nav.desktopOnly{
 	height: 4em;
 	padding-left: 2%;
 	padding-right: 2%;
@@ -343,12 +422,10 @@ header nav.desktopOnly{
 
 	@media only screen and (min-width: 1025px){
 		display: flex;
-		overflow-x: hidden;
-		overflow-y: auto;
 	}
 }
 
-header nav.desktopOnly a{
+header > nav.desktopOnly a{
 	padding-left: .67em;
 	padding-right: .67em;
 	line-height: 4.2em;
@@ -365,10 +442,51 @@ header nav.desktopOnly a{
 	display: block;
 }
 
-header nav.desktopOnly a:hover{
+header > nav.desktopOnly a:hover{
 	background-color: white;
 	color: var(--ned-game-blue);
 }
+
+@media only screen and (min-width: 1025px) {
+	header div.desktopOnly{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1em;
+	}
+}
+
+header div.desktopOnly nav{
+	display: flex;
+}
+
+header div.desktopOnly img:first-of-type{
+	display: block;
+    width: 211px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+header div.desktopOnly nav a, header div.desktopOnly nav button{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-wrap: nowrap;
+}
+
+header div.desktopOnly nav a span, header div.desktopOnly nav button span{
+	color: #666666;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+header div.desktopOnly a:nth-of-type(2){
+	fill: var(--ned-game-green);
+	color: var(--ned-game-green);
+}
+
 
 /****************/
 /* product */
@@ -401,6 +519,10 @@ header nav.desktopOnly a:hover{
 	padding: 12px 6px;
 	border: 1px solid #efefef;
 	border-radius: 5px;
+}
+
+.productFloater:hover {
+	border: 1px solid #222121;
 }
 
 .productFloater img {
@@ -437,6 +559,10 @@ header nav.desktopOnly a:hover{
 	outline: 0;
 }
 
+.productFloater button:first-of-type:hover{
+	border: 1px solid #222121; 
+}
+
 .productFloater button:first-of-type{
 	background-color: var(--button-grey);
 	fill: var(--ned-game-blue); 
@@ -450,7 +576,7 @@ header nav.desktopOnly a:hover{
 
 .productFloater button:nth-of-type(2){
 	background-color: var(--ned-game-green);
-	fill: white;
+	fill: var(--color-text-white);
 }
 
 .productFloater button svg {
@@ -467,10 +593,17 @@ header nav.desktopOnly a:hover{
 }
 
 .productswrapper {
-	grid-template-columns: repeat(7, 1fr);
 	width: 100%;
 	padding-left: 8px;
 }
+
+@media only screen and (min-width: 1025px){
+	.productswrapper{
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+	}
+}
+
 
 /* main section {
 	padding-left: 8px;
@@ -489,16 +622,122 @@ header nav.desktopOnly a:hover{
 /****************/
 /* Product */
 /****************/
-#productimage {
+/* #productimage {
 	width: auto;
 	height: auto;
 	max-width: 100%;
 	max-height: 100%;
+} */
+
+/* (https://css-tricks.com/css-only-carousel/) */
+#productandinfo{
+	display: grid;
+	@media only screen and (min-width: 1025px){
+		grid-auto-flow: column;
+	}
+	@media only screen and (max-width: 1024px){
+		grid-auto-flow: row;
+	}
+}
+
+#productSlider{
+	text-align: center;
+	overflow: hidden;
+	display: flex;
+
+	@media only screen and (min-width: 1025px){
+		flex-direction: row-reverse;
+	}
+	@media only screen and (max-width: 1024px){
+		flex-direction: column;
+	}
+}
+
+#productSlider a button{
+	display: flex;
+	flex-direction: row;
+	width: 50px;
+    height: 50px;
+    background-color: var(--color-background);
+	background-size: contain;
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    margin: 10px 0 10px 10px;
+    cursor: pointer !important;
+}
+
+#productSlider a button:hover {
+	border: 1px solid var(--ned-game-blue);
+}
+
+#productSlider a button:active {
+	border: 1px solid var(--ned-game-blue);
+}
+
+#productSlider div:nth-of-type(2){
+	display: flex;
+	@media only screen and (min-width: 1025px){
+		flex-direction: column;
+	}
+	@media only screen and (max-width: 1024px){
+		flex-direction: row;
+	}
+}
+
+#info {
+
+	@media only screen and (min-width: 1025px){
+		width: auto;
+		height: fit-content;
+		max-width: 40vw;
+		box-shadow: 0 0 30px 0 #cecece;
+		padding: 2em;
+		border: 1px solid #b1b1b1;
+		border-radius: 1em;
+		border: none;
+		box-shadow: 0 0 30px 0 #cecece;
+		margin-right: 1em;
+
+		h2:first-of-type {
+			font-weight: 700;
+			font-size: 1.45em;
+		}
+	}
+}
+
+#productSlides {
+	display: flex;
+
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+}
+
+#productSlides > div {
+	scroll-snap-align: start;
+	flex-shrink: 0;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 dl {
-	display: grid;
-	grid-template-columns: auto auto;
+	@media only screen and (max-width: 1024px){
+		display: grid;
+		grid-template-columns: auto auto;
+	} 
+	@media only screen and (min-width: 1025px){
+		display: flex;
+    	justify-content: flex-start;
+	}
 }
 
 dt {
@@ -507,7 +746,13 @@ dt {
 }
 
 dd {
-	grid-column-start: 2;
+	@media only screen and (max-width: 1024px){
+		grid-column-start: 2;
+	} 
+	@media only screen and (min-width: 1025px){
+		margin-left: 1em;
+    	margin-right: 1em;
+	}
 }
 
 #koopbuttons{
@@ -545,11 +790,11 @@ dd {
 }
 
 #koopbuttons button:nth-of-type(2){
-	background-color: #00B67A;
+	background-color: var(--ned-game-green);
 }
 
 #koopbuttons button:nth-of-type(3){
-	background-color: #12B610;
+	background-color: var(--button-altgreen);
 }
 
 main p, h2, h3, dl{
@@ -577,7 +822,7 @@ select {
     position: relative;
     padding-right: 1.75em;
     color: #333;
-    z-index: 10;
+    z-index: 2;
 }
 
 
@@ -586,7 +831,7 @@ select {
 	display: flex;
 }
 
-.banners a:nth-of-type(2){
+.banners a:not(:first-of-type){
 	@media only screen and (max-width: 1024px){
 		display: none;
 	}
@@ -595,9 +840,8 @@ select {
 .banners a {
 	display: flex;
 	flex-direction: column-reverse;
-
 	width: 100%;
-	height: 10em;
+	height: 14em;
 	background-image: url(/images/banner.webp);
 	background-position: center;
 	background-repeat: no-repeat;

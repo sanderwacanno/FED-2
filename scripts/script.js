@@ -24,6 +24,7 @@ function favorite(event){
 
 
     let favlistAmount = document.querySelector("header a.counterbutton span.favcounter");
+    let favlistAmountDesktop = document.querySelector("header div.desktopOnly a.counterbutton span.favcounter");
 
     let currentFavAmount = favlistAmount.innerHTML;
 
@@ -38,4 +39,31 @@ function favorite(event){
     }
 
     favlistAmount.innerHTML = newFavAmount;
+    favlistAmountDesktop.innerHTML = newFavAmount;
+}
+
+var basketButtons = document.querySelectorAll("article.productFloater button:nth-of-type(2)")
+
+for (let i = 0; i < basketButtons.length; i++) {
+  basketButtons[i].onclick = addToCart;
+}
+
+function addToCart(event){
+    // let clickedBasketButton = event.target;
+
+    // let heartButton = clickedBasketButton.closest("article");
+    // heartButton.classList.toggle("faved");
+
+
+    let cartAmount = document.querySelector("header a.counterbutton span.cartcounter");
+    let cartAmountDesktop = document.querySelector("header div.desktopOnly a.counterbutton span.cartcounter");
+
+    let currentCartAmount = cartAmount.innerHTML;
+
+    currentCartAmount = parseInt(currentCartAmount);
+
+    let newCartAmount = currentCartAmount + 1;
+
+    cartAmount.innerHTML = newCartAmount;
+    cartAmountDesktop.innerHTML = newCartAmount;
 }

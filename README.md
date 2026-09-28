@@ -39,12 +39,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   [link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp](https://www.nedgame.nl/)
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Homepagina van de site.
+  <img src="readme-images/fullnedmainscreenshot.png" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Een product pagina van de site.
+  <img src="readme-images/warhammer-pluche---skaven-deathmaster.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -78,13 +78,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/homepagebreakdown.png" width="375px" alt="breakdown van de hele pagina">
 
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  ### de hele pagina: 
+  <img src="readme-images/productbreakdown.png" width="375px" alt="breakdown van de hele pagina">
 
 </details>
 
@@ -147,10 +144,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+Dingen om aan te werken:
+- Banner
+- Grid responsive main page 
+- ids verminderen, custom properties gebruiken
+- hartje & winkelmandje V
+- focus state
+- product viewer carousel
 
 </details>
 
@@ -244,5 +244,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   3. ...
 
   https://stackoverflow.com/questions/1713048/how-to-style-dt-and-dd-so-they-are-on-the-same-line
-
+  https://css-tricks.com/css-only-carousel/
+  nedgame
 </details>
