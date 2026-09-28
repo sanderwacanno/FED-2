@@ -235,15 +235,8 @@ Dingen om aan te werken:
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
 
-  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
-  Nb. ChatGpT en andere AI horen er ook bij.
-  Nb. Vermeld de bronnen ook in je code.
-
-  1. bron 1
-  2. bron 2
-  3. ...
-
+  W3schools.com voor naslag werk over hoe sommige functies werken (Styling Lists, Text-transform, Text-shadow, Background-image property, Background-size, How To Create a Search Bar, CSS pointer-events, input, span, select, Grid Layout, grid-column en grid-column-start property, grid template, flex-wrap, onclick Event)
   https://stackoverflow.com/questions/1713048/how-to-style-dt-and-dd-so-they-are-on-the-same-line
-  https://css-tricks.com/css-only-carousel/
-  nedgame
+  Tutorial voor het maken van de product carousel: https://css-tricks.com/css-only-carousel/
+  Nedgame.nl voor CSS code voor padding, margin, etc van bepaalde elementen.
 </details>

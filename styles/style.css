@@ -24,6 +24,12 @@
 	--icon-color: #959595;
 	--button-grey: #F7F7F5;
 	--button-altgreen: #12B610;
+	--input-gray: #666;
+
+	--ned-game-green-hover: #009966;
+	--ned-game-green-active: #00704b;
+	--button-altgreen-hover: #0F9B0D;
+
 
 	--background-image: url(../images/581_s4756884n2ht6247.webp);
 }
@@ -70,6 +76,13 @@ body {
 	}
 } 
 
+p {
+	color: var(--color-text);
+}
+
+li {
+	color: var(--color-text);
+}
 
 svg {
 	height: 1em;
@@ -95,6 +108,10 @@ h1 {
 	margin-top: 2rem;
 }
 
+header > h1 {
+	display: none;
+}
+
 @media only screen and (max-width: 1024px){
 	h1 {
 		text-align: center;
@@ -103,6 +120,11 @@ h1 {
 
 h2 {
 	font-size: 1.25em;
+	color: var(--color-text);
+}
+
+h3 {
+	color: var(--color-text);
 }
 
 #topbanner{
@@ -142,10 +164,10 @@ header ul {
 header form.mobileOnly input {
 	width: calc(100% - 43px);
 	height: 43px;
-	color: #666;
+	color: var(--input-gray);
 
-	border: 1px solid #666;
-	border-left: 1px solid #666;
+	border: 1px solid var(--input-gray);
+	border-left: 1px solid var(--input-gray);
 	border-right: 0;
 	border-radius: 5px 0 0 5px;
 }
@@ -153,10 +175,10 @@ header form.mobileOnly input {
 header div.desktopOnly input {
 	width: calc(80% - 43px);
 	height: 43px;
-	color: #666;
+	color: var(--input-gray);
 
-	border: 1px solid #666;
-	border-left: 1px solid #666;
+	border: 1px solid var(--input-gray);
+	border-left: 1px solid var(--input-gray);
 	border-right: 0;
 	border-radius: 5px 0 0 5px;
 }
@@ -171,8 +193,8 @@ header form button {
 	height: 43px;
 	margin: 0;
 	padding: 0 6px;
-	background-color: #00669b;
-	border: 1px solid #00669b;
+	background-color: var(--ned-game-blue);
+	border: 1px solid var(--ned-game-blue);
 	border-radius: 0 5px 5px 0;
 	cursor: pointer;
 	fill: #fff;
@@ -351,6 +373,7 @@ footer li {
 
 footer > p {
 	text-align: center;
+	padding-bottom: 2em;
 }
 
 footer div.desktopOnly div{
@@ -364,6 +387,15 @@ footer div.desktopOnly div:first-of-type{
 
 footer div.desktopOnly div:first-of-type div{
 	display: block;
+}
+
+footer button {
+	background-color: var(--ned-game-blue);
+	color: var(--color-text-white);
+	padding: .65em 1em;
+    position: relative;
+	border: none;
+	border-radius: 25px;
 }
 
 /* Main Nav */
@@ -382,7 +414,7 @@ main nav {
 }
 
 main nav:first-of-type a{
-	color: #000;
+	color: var(--color-text);
 }
 
 main nav a {
@@ -396,6 +428,7 @@ main nav a {
 
 main nav a:hover {
 	border: 1px solid #222121;
+	text-decoration: underline;
 }
 
 main nav a img{
@@ -443,7 +476,7 @@ header > nav.desktopOnly a{
 }
 
 header > nav.desktopOnly a:hover{
-	background-color: white;
+	background-color: var(--color-background);
 	color: var(--ned-game-blue);
 }
 
@@ -475,7 +508,7 @@ header div.desktopOnly nav a, header div.desktopOnly nav button{
 }
 
 header div.desktopOnly nav a span, header div.desktopOnly nav button span{
-	color: #666666;
+	color: var(--input-gray);
 	padding-left: 0.5em;
 	padding-right: 0.5em;
 	font-size: 12px;
@@ -495,6 +528,7 @@ header div.desktopOnly a:nth-of-type(2){
 	display: grid;
 	grid-template-columns: auto auto;
 	align-items: center;
+	margin-bottom: 2em;
 }
 
 .productSection .productswrapper{
@@ -512,7 +546,8 @@ header div.desktopOnly a:nth-of-type(2){
 }
 
 .productFloater{
-	width: 142px;
+	min-width: 142px;
+	width: auto;
 	display: inline-block;
 	text-align: center;
 	margin: 20px 5px 0px;
@@ -535,15 +570,20 @@ header div.desktopOnly a:nth-of-type(2){
 	opacity: .89;
 	font-size: 16px;
 	font-weight: bold;
-	color: black;
+	color: var(--color-text);
 	text-align: center;
 	width: 100%;
 	height: auto;
 }
 
-.productFloater a{
+.productFloater h3{
 	color: var(--ned-game-blue);
+	font-size: 1em;
 	font-weight: 700;
+}
+
+.productFloater h3:hover{
+	text-decoration: underline;
 }
 
 .productFloater button {
@@ -560,7 +600,7 @@ header div.desktopOnly a:nth-of-type(2){
 }
 
 .productFloater button:first-of-type:hover{
-	border: 1px solid #222121; 
+	border: 1px solid var(--ned-game-blue); 
 }
 
 .productFloater button:first-of-type{
@@ -577,6 +617,14 @@ header div.desktopOnly a:nth-of-type(2){
 .productFloater button:nth-of-type(2){
 	background-color: var(--ned-game-green);
 	fill: var(--color-text-white);
+}
+
+.productFloater button:nth-of-type(2):hover{
+	background-color: var(--ned-game-green-hover);
+}
+
+.productFloater button:nth-of-type(2):active{
+	background-color: var(--ned-game-green-active);
 }
 
 .productFloater button svg {
@@ -647,13 +695,14 @@ header div.desktopOnly a:nth-of-type(2){
 
 	@media only screen and (min-width: 1025px){
 		flex-direction: row-reverse;
+		gap: 0.5em;
 	}
 	@media only screen and (max-width: 1024px){
 		flex-direction: column;
 	}
 }
 
-#productSlider a button{
+#productSlider a{
 	display: flex;
 	flex-direction: row;
 	width: 50px;
@@ -667,11 +716,11 @@ header div.desktopOnly a:nth-of-type(2){
     cursor: pointer !important;
 }
 
-#productSlider a button:hover {
+#productSlider a:hover {
 	border: 1px solid var(--ned-game-blue);
 }
 
-#productSlider a button:active {
+#productSlider a:active {
 	border: 1px solid var(--ned-game-blue);
 }
 
@@ -706,6 +755,11 @@ header div.desktopOnly a:nth-of-type(2){
 	}
 }
 
+#info div:nth-of-type(2){
+	padding-left: 3em;
+	padding-right: 3em;
+}
+
 #productSlides {
 	display: flex;
 
@@ -730,6 +784,7 @@ header div.desktopOnly a:nth-of-type(2){
 }
 
 dl {
+	padding-left: 1em;
 	@media only screen and (max-width: 1024px){
 		display: grid;
 		grid-template-columns: auto auto;
@@ -789,12 +844,34 @@ dd {
     outline: 0;
 }
 
+#koopbuttons button:first-of-type:hover{
+	border: 1px solid var(--ned-game-blue);
+}
+
 #koopbuttons button:nth-of-type(2){
 	background-color: var(--ned-game-green);
 }
 
+#koopbuttons button:nth-of-type(2):hover{
+	background-color: var(--ned-game-green-hover);
+}
+
 #koopbuttons button:nth-of-type(3){
 	background-color: var(--button-altgreen);
+}
+
+#koopbuttons button:nth-of-type(3):hover{
+	background-color: var(--button-altgreen-hover);
+}
+
+#productDescription{
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-bottom: 3em;
+}
+
+#productDescription p{
+	margin-bottom: 0.5em;
 }
 
 main p, h2, h3, dl{
@@ -829,6 +906,7 @@ select {
 /* Banner */
 .banners {
 	display: flex;
+	gap: 1em;
 }
 
 .banners a:not(:first-of-type){
@@ -842,7 +920,7 @@ select {
 	flex-direction: column-reverse;
 	width: 100%;
 	height: 14em;
-	background-image: url(/images/banner.webp);
+	background-image: url(images/banner.webp);
 	background-position: center;
 	background-repeat: no-repeat;
 	/* background-color: var(--color-background); */
@@ -868,12 +946,3 @@ select {
 	}
 } 
 
-/* - Responsive
-- Banner
-- Grid responsive main page 
-- ids verminderen, custom properties gebruiken
-- hartje & winkelmandje V
-- focus state
-- product viewer carousel
-
-*/
