@@ -74,13 +74,15 @@ let isNachtModusAan = false;
 function toggleNachtModus() {
     if (isNachtModusAan) {
         document.documentElement.style.setProperty("--color-background", "#151515")
-        document.documentElement.style.setProperty("--color-text", "#EAEAEA")  
+        document.documentElement.style.setProperty("--color-text", "#EAEAEA") 
+        document.documentElement.style.setProperty("--icon-black", "#fff") 
         document.documentElement.style.setProperty("--background-image", "url(../images/581_s4756884n2ht6247-dark.webp)")
         isNachtModusAan = false;
     }
     else {
         document.documentElement.style.setProperty("--color-background", "#ffffff")
-        document.documentElement.style.setProperty("--color-text", "#333")       
+        document.documentElement.style.setProperty("--color-text", "#333")
+        document.documentElement.style.setProperty("--icon-black", "#000")     
         document.documentElement.style.setProperty("--background-image", "url(../images/581_s4756884n2ht6247.webp)")
         isNachtModusAan = true;
     }
