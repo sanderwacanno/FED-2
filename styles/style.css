@@ -920,7 +920,7 @@ select {
 	flex-direction: column-reverse;
 	width: 100%;
 	height: 14em;
-	background-image: url(images/banner.webp);
+	background-image: url(../images/banner.webp);
 	background-position: center;
 	background-repeat: no-repeat;
 	/* background-color: var(--color-background); */
