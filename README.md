@@ -244,18 +244,24 @@ Dingen om aan te werken:
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  #### Desktop site:
+  <img src="readme-images/fullhomepagemobiel.png" width="375px" alt="Homepagina op mobiel">
+  <img src="readme-images/fullhomepagedesktop.png" width="375px" alt="Homepagina op desktop">
+
+  #### Mobiel site:
+  <img src="readme-images/fullproductpagemobiel.png" width="375px" alt="Product pagina op mobiel">
+  <img src="readme-images/fullproductdesktop.png" width="375px" alt="Product pagina op desktop">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
-
+  Vergelijken met de versie van 2 jaar geleden heb ik deze versie veel better en nauwkeuriger kunnen maken, met minder problemen.
+  Ook werken de interactieve delen, zoals de winkelmandje, favoriet knop en image carousel redelijk goed.
+  De desktop versie en de mobiele versie laten dingen goed zien gebaseerd op de breedte van de scherm, en kunnen makkelijk verdwijnen dankzij de class die dingen op mobiel en desktop voormaat laten verdwijnen.
 
   ### Dit was lastig/Is niet gelukt:
   Padding, margin en object grootte vond ik lastig om het 1:1 te kopieren van de originele site. 
-  Ook veranderde de fontsize niet zoals dat doet in de originele site, waard
+  Ook veranderde de fontsize niet zoals dat doet in de originele site, waardoor scaling beetje cramped word als je de horizontale breedte manually kleiner maakt.
+  Gebruikt misschien nog een paar ID's en Classes die verandert zou kunnen worden door selectors.
 
 </details>
 
