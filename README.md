@@ -68,6 +68,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   De header is niet echt een header, maar eigenlijk een div'je.
 
+  Screenshots van de gemaakte W3C test.
   <img src="readme-images/w3ccheck1-page1.jpg" width="375px" alt="Pagina 1 W3C test">
   <img src="readme-images/w3ccheck1-page2.jpg" width="375px" alt="Pagina 2 W3C test">
   <img src="readme-images/w3ccheck1-page3.jpg" width="375px" alt="Pagina 3 W3C test">
